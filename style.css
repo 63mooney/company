@@ -64,13 +64,14 @@ footer{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   font-weight: bold;
+  height: max-content;
 }
 
 footer h3{
   font-weight: bold;
 }
 
-footer .social-icons a{
+footer .social-icons i{
   font-size: medium;
   margin-right: 24px;
 }
@@ -313,4 +314,28 @@ footer .social-icons a:not(:last-child){
       font-size: 62.5%;
   }
   
+}
+
+@media (max-width: 768px) {
+  #services h1 {
+      font-size: 1.8rem;
+  }
+
+  .card img {
+      height: 150px;
+  }
+
+  .card-text {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card img {
+      height: 120px;
+  }
+
+  .card-text {
+      font-size: 0.85rem;
+  }
 }
