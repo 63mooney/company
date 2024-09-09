@@ -9,31 +9,36 @@
   position: sticky;
   position-try: 3;
   width: 100%;
+  z-index: 1000;
 }
 
 .navbar .nav-link {
-  color: #F1E6D2; /* Mengatur warna teks link */
-  transition: color 0.3s; /* Menambahkan efek transisi pada hover */
+  color: #F1E6D2; 
+  transition: color 0.3s; 
+  background-color: #67191f;
 }
 
-/* Mengubah warna link saat hover */
 .navbar .nav-link:hover {
-  color: #fff; /* Mengubah warna teks saat hover */
+  color: #fff; 
+  
 }
 
-/* Mengatur logo/brand pada navbar */
 .navbar .navbar-brand {
   color: #F1E6D2;
   font-weight: bold;
   font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
-/* Mengatur tombol toggler (untuk tampilan mobile) */
 .navbar-toggler {
-  border-color: #F1E6D2; /* Mengatur warna border tombol toggler */
-  background-color: #67191f;
+  color: #F1E6D2;
+  border-radius: none;
+  z-index: 1050;
 }
 
+body{
+  height: 100%;
+}
 
 .bg-image{
   min-height: 450px;
@@ -68,11 +73,14 @@ footer{
 }
 
 footer h3{
+  padding-top: 5px;
   font-weight: bold;
+  text-align: center;
 }
 
 footer .social-icons i{
   font-size: medium;
+  margin-top: 5px;
   margin-right: 24px;
 }
 footer .social-icons a:not(:last-child){
@@ -96,9 +104,16 @@ footer .social-icons a:not(:last-child){
   text-align: center;
 }
 
+#content .row{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 #content .card{
   color: #ab3130;
-  width: 14rem;
+  width: 100%;
+  height: auto;
 }
 
 #portfolio{
@@ -108,19 +123,10 @@ footer .social-icons a:not(:last-child){
   text-align: center;
 }
 
-#portfolio .card{
-  width: 18rem; 
-  height: 13rem; 
-  color: #ab3130;
-}
 
-#portfolio .card img {
-  max-width: 100%; /* Ensuring images are fully responsive */
-  height: auto; 
-}
-
-#portfolio .card-body {
-  text-align: center;
+#portfolio .row{
+  justify-content: center;
+  align-items: center;
 }
 
 #services{
@@ -186,6 +192,11 @@ footer .social-icons a:not(:last-child){
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+#careers .row{
+  justify-content: center;
+  align-items: center;
+}
+
 #insight {
   background-color: #F1E6D2;
   width: max-width;
@@ -197,7 +208,7 @@ footer .social-icons a:not(:last-child){
 #insight .card{
   margin: 2%;
   height: 20rem; 
-  width: 20rem;
+  width: 100;
   align-items: center;
 }
 
@@ -209,12 +220,8 @@ footer .social-icons a:not(:last-child){
 #insight .row{
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-}
-
-#insight .img{
-  margin: 1rem; 
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  width: 100%;
 }
 
 #insight h6{
@@ -222,17 +229,20 @@ footer .social-icons a:not(:last-child){
 }
 
 #insight .img{
-  height: 90px;
-  width: 90px;
+  height: auto;
+  width: 100%;
   justify-content: center;
 }
 #insight .card-body{
   align-items: center;
-  width: 19rem;
+  width: 100%;
   height: 13rem;
   color: #ab3130;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
+}
+#insight .card-text{
+  width: fit-content;
 }
 
 #question{
@@ -248,11 +258,20 @@ footer .social-icons a:not(:last-child){
   text-align: center;
   align-items: center;
   padding: 3%;
+  justify-content:center;
+}
+
+#contact .row{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 #contact h1{
   font-weight: bold;
   padding-bottom: 2%;
+  width: 100%;
+  text-align: center;
 }
 
 #contact .list-group{
@@ -300,23 +319,28 @@ footer .social-icons a:not(:last-child){
 
 .bg-image #sambutan h1{
   color: #F1E6D2;
-  background-color: #ab3130;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   font-weight: bold;
-  border-radius: 50px;
   display: inline-block;
-  
+  padding-top: 180px;
 }
 
 @media (max-width: 450px) {
-  html {
+  body {
       font-size: 62.5%;
+      height: 100%;
   }
   
 }
 
 @media (max-width: 768px) {
+  html,body {
+    font-size: 62.5%;
+    height: 100%;
+  }
+  
   #services h1 {
       font-size: 1.8rem;
   }
@@ -331,6 +355,10 @@ footer .social-icons a:not(:last-child){
 }
 
 @media (max-width: 576px) {
+  html,body {
+    font-size: 62.5%;
+    height: 100%;
+  }
   .card img {
       height: 120px;
   }
