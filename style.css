@@ -1,6 +1,6 @@
 .navbar{
   background-color: #67191f;
-  color: #eedbbf;
+  color: white;
   height: 5rem;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
@@ -8,31 +8,73 @@
   font-size: x-large;
   position: sticky;
   position-try: 3;
+  width: 100%;
 }
 
-.navbar .container .navbar-brand{
+.navbar .nav-link {
+  color: #F1E6D2; /* Mengatur warna teks link */
+  transition: color 0.3s; /* Menambahkan efek transisi pada hover */
+}
+
+/* Mengubah warna link saat hover */
+.navbar .nav-link:hover {
+  color: #fff; /* Mengubah warna teks saat hover */
+}
+
+/* Mengatur logo/brand pada navbar */
+.navbar .navbar-brand {
+  color: #F1E6D2;
   font-weight: bold;
-  font-size: x-large;
+  font-size: 1.5rem;
+}
+
+/* Mengatur tombol toggler (untuk tampilan mobile) */
+.navbar-toggler {
+  border-color: #F1E6D2; /* Mengatur warna border tombol toggler */
+}
+
+
+.bg-image{
+  min-height: 450px;
+  background-image: url(asset/img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a{
   color: #eedbbf;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+a:hover{
+  color: #ab3130;
+}
+
+.brand{
+  color:#eedbbf;
+  font-size: 28px;
 }
 
 footer{
   background-color: #67191f;
   color: #F1E6D2;
-  height: max-content;
+  height: 5rem;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   font-weight: bold;
   font-size: large;
 }
 
-header .navbar-nav{
-  align-items: center;
-  font-size: 25px;
-  font-weight: bold;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  height: 4rem;
+footer .social-icons a{
+  font-size: 24px;
+  margin-right: 24px;
 }
+footer .social-icons a:not(:last-child){
+  margin-right: 24px;
+}
+
 
 #home{
   text-align: center;
@@ -68,8 +110,13 @@ header .navbar-nav{
   color: #ab3130;
 }
 
-#portfolio .card .card-img{
-  height: 10rem;
+#portfolio .card img {
+  max-width: 100%; /* Ensuring images are fully responsive */
+  height: auto; 
+}
+
+#portfolio .card-body {
+  text-align: center;
 }
 
 #services{
@@ -83,18 +130,23 @@ header .navbar-nav{
 #services .card {
   color: #ab3130;
   align-items: center;
-  width: 350px;
+  max-width: 350px;
   height: 340px;
 }
 
 #services .card .card-img{
   padding-top: 15px;
   padding-bottom: 10px;
-  width: 150px;
+  width: 100%px;
+  height: auto;
 }
 
 #services .card{
   color: #ab3130;
+}
+
+#services .card-text {
+  overflow-wrap: break-word;
 }
 
 #careers{
@@ -153,6 +205,7 @@ header .navbar-nav{
 #insight .row{
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 #insight .img{
@@ -216,14 +269,7 @@ header .navbar-nav{
   width: max-width;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-}
-
-.bg-image{
-  min-height: 450px;
-  background-image: url(img/background.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  
 }
 
 .container{
