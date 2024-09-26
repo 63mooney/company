@@ -41,6 +41,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  justify-content: center;
 }
 
 .bg-image #sambutan h1{
@@ -51,6 +52,7 @@
   font-weight: bold;
   display: inline-block;
   padding-top: 180px;
+  justify-content: center;
 }
 
 a{
@@ -191,7 +193,7 @@ footer .social-icons{
   overflow: hidden;
 }
 
-#portfolio h1{
+#portfolio .section-intro{
   padding-bottom: 5px;
   font-weight: bold;
 }
